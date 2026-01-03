@@ -32,12 +32,12 @@ Built using **Python, Flask, PostgreSQL (Neon), SMTP**, automated with **GitHub 
 
 ## 📂 Project Structure
 ├── app.py # Flask payment service
-├── send_email.py # Email automation script
-├── requirements.txt
-├── .env # Environment variables (local)
-├── .github/
-│ └── workflows/
-│ └── email_cron.yml # GitHub Actions automation
-└── README.md
+- ├── send_email.py # Email automation script
+- ├── requirements.txt
+- ├── .env # Environment variables (local)
+- ├── .github/
+- │   └── workflows/
+- │ └── email_cron.yml # GitHub Actions automation
+- └── README.md
 
 
