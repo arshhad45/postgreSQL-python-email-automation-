@@ -1,0 +1,26 @@
+name: loan-payment-app
+services:
+  - name: web
+    ports:
+      - port: 5000
+        http_path: /
+    env:
+      - name: DATABASE_URL
+        value: {{ .DATABASE_URL }}
+      - name: EMAIL
+        value: {{ .EMAIL }}
+      - name: PASSWORD
+        value: {{ .PASSWORD }}
+      - name: BASE_URL
+        value: {{ .BASE_URL }}
+      - name: PORT
+        value: "5000"
+    build:
+      dockerfile: |
+        FROM python:3.9-slim
+        WORKDIR /app
+        COPY requirements.txt .
+        RUN pip install --no-cache-dir -r requirements.txt
+        COPY . .
+    # ADD THIS COMMAND SECTION:
+    command: gunicorn --bind 0.0.0.0:5000 app:app
