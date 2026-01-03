@@ -18,4 +18,4 @@ jobs:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
           EMAIL: ${{ secrets.EMAIL }}
           PASSWORD: ${{ secrets.PASSWORD }}
-          BASE_URL: https://spare-wilmette/postgresql-python-email-automation.koyeb.app
+          BASE_URL: https://spare-wilmette-arshad45-08cff2a3.koyeb.app/
